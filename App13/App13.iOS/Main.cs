@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using FreshMvvm;
 
 namespace App13.iOS
 {
@@ -14,6 +15,8 @@ namespace App13.iOS
         {
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
+            FreshIOC.Container.Register<IDataBasePath, DataBasePathIOS>();
+
             UIApplication.Main(args, null, "AppDelegate");
         }
     }

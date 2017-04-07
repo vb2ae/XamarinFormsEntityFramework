@@ -1,6 +1,10 @@
-﻿using System;
+﻿using App13.PageModels;
+using FreshMvvm;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 using Xamarin.Forms;
@@ -13,12 +17,16 @@ namespace App13
         {
             InitializeComponent();
 
-            MainPage = new App13.MainPage();
+            var homePage = FreshMvvm.FreshPageModelResolver.ResolvePageModel<ToDoPageModel>();
+            var navConatiner = new FreshMvvm.FreshNavigationContainer(homePage);
+            MainPage = navConatiner;
+
         }
 
-        protected override void OnStart()
+        protected async override void OnStart()
         {
             // Handle when your app starts
+
         }
 
         protected override void OnSleep()

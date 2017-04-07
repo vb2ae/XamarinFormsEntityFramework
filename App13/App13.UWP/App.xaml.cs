@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FreshMvvm;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 namespace App13.UWP
 {
     /// <summary>
@@ -30,7 +32,9 @@ namespace App13.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            FreshIOC.Container.Register<IDataBasePath, DataBasePathUWP>();
         }
+
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

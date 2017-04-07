@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using FreshMvvm;
 
 namespace App13.Droid
 {
@@ -16,6 +17,7 @@ namespace App13.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            FreshIOC.Container.Register<IDataBasePath, DroidDataBasePath>();
 
             base.OnCreate(bundle);
 
