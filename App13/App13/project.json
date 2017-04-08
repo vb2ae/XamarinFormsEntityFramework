@@ -5,6 +5,7 @@
     "Microsoft.EntityFrameworkCore.Sqlite": "1.1.1",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "1.6.1",
+    "PropertyChanged.Fody": "1.52.1",
     "Xamarin.Forms": "2.3.3.193"
   },
   "frameworks": {

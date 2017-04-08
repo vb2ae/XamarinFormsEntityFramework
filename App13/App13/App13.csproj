@@ -57,7 +57,9 @@
   <ItemGroup>
     <None Include="project.json" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\ToDoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
